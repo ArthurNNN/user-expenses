@@ -1,10 +1,10 @@
-package personExample;
+package userExpenses;
 
 import java.util.ArrayList;
 
-public class Person {
+public class User {
 
-	// Fields from Person Class
+	// Fields from User Class
 	public String name;
 	public int age;
 	public int weigth;
@@ -12,16 +12,16 @@ public class Person {
 	public double basicSalary;
 	public ArrayList<Expense> expenses;
 
-	// Constructor from Person Class
-	public Person() {
+	// Constructor from User Class
+	public User() {
 	}
 
-	public Person(String name, int age) {
+	public User(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
 
-	public Person(String name, int age, int weigth, int heigth) {
+	public User(String name, int age, int weigth, int heigth) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -29,7 +29,7 @@ public class Person {
 		this.heigth = heigth;
 	}
 
-	public Person(String name, int age, int weigth, int heigth, double basicSalary) {
+	public User(String name, int age, int weigth, int heigth, double basicSalary) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -39,7 +39,7 @@ public class Person {
 		this.expenses = new ArrayList<Expense>();
 	}
 
-	public Person(String name, int age, int weigth, int heigth, double basicSalary, ArrayList<Expense> expensesArr) {
+	public User(String name, int age, int weigth, int heigth, double basicSalary, ArrayList<Expense> expensesArr) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -49,7 +49,7 @@ public class Person {
 		this.expenses = expensesArr;
 	}
 
-	// Methods from Person Class
+	// Methods from User Class
 	public double salaryAfterExpenses() {
 
 		double salaryMensual = this.basicSalary;
@@ -171,7 +171,7 @@ public class Person {
 	// toString
 	@Override
 	public String toString() {
-		return "Person Data Fields:\n  name=" + name + ", age=" + age + ", weigth=" + weigth + ", heigth=" + heigth
+		return "User Data Fields:\n  name=" + name + ", age=" + age + ", weigth=" + weigth + ", heigth=" + heigth
 				+ ", basicSalary=" + basicSalary + "\n";
 	}
 

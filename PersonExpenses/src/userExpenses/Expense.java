@@ -1,4 +1,4 @@
-package personExample;
+package userExpenses;
 
 public class Expense {
 	public String title;

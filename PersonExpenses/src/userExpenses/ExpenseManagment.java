@@ -1,4 +1,4 @@
-package personExample;
+package userExpenses;
 
 import java.util.ArrayList;
 

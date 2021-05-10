@@ -1,19 +1,19 @@
-package personExample;
+package userExpenses;
 
 import java.util.ArrayList;
 
-public class TestPerson {
-	public static void executePerson() {
-		createAndTestObjectsPerson();
+public class TestUser {
+	public static void executeUser() {
+		createAndTestObjectsUser();
 	}
 
-	public static void createAndTestObjectsPerson() {
+	public static void createAndTestObjectsUser() {
 
-		Person sergi = new Person();
+		User sergi = new User();
 
-		Person isa = new Person("Isabel", 18);
+		User isa = new User("Isabel", 18);
 
-		Person toni = new Person("Antonio", 30, 80, 180, 2000);
+		User toni = new User("Antonio", 30, 80, 180, 2000);
 
 //		System.out.println(sergi.toString());
 //
@@ -38,11 +38,11 @@ public class TestPerson {
 
 	}
 
-	public static void testMethodsObjectsPerson() {
+	public static void testMethodsObjectsUser() {
 
-		Person max = new Person("Max", 30, 75, 170, 2500);
-		Person lisa = new Person("Lisa", 18, 65, 165, 1200);
-		Person jack = new Person("Jackson Pollock", 35, 80, 180, 8000);
+		User max = new User("Max", 30, 75, 170, 2500);
+		User lisa = new User("Lisa", 18, 65, 165, 1200);
+		User jack = new User("Jackson Pollock", 35, 80, 180, 8000);
 //		
 //
 //		max.expenses.add(new Expense("Vodafone", 14.95, true));
@@ -76,23 +76,23 @@ public class TestPerson {
 
 	}
 
-	public static void testListObjectsPerson() {
+	public static void testListObjectsUser() {
 
-		ArrayList<Person> people = new ArrayList<>();
+		ArrayList<User> users = new ArrayList<>();
 
-		Person alexa = new Person("Alexa", 25, 60, 170);
-		Person jack = new Person("Jackson Pollock", 35);
-		Person marc = new Person();
+		User alexa = new User("Alexa", 25, 60, 170);
+		User jack = new User("Jackson Pollock", 35);
+		User marc = new User();
 
-		people.add(alexa);
-		people.add(marc);
-		people.add(jack);
+		users.add(alexa);
+		users.add(marc);
+		users.add(jack);
 
-		printPeople(people);
+		printUsers(users);
 	}
 
-	public static void testExpensesPerson() {
-		Person isa = new Person("Isabel", 18, 180, 60, 3000);
+	public static void testExpensesUser() {
+		User isa = new User("Isabel", 18, 180, 60, 3000);
 		System.out.println(isa);
 
 		// option A
@@ -113,10 +113,10 @@ public class TestPerson {
 		System.out.println("Expenses: " + isa.calculateExpenses(5));
 	}
 
-	private static void printPeople(ArrayList<Person> arrayToPrint) {
-		System.out.println("People:");
-		for (Person personToPrint : arrayToPrint) {
-			System.out.println(personToPrint);
+	private static void printUsers(ArrayList<User> arrayToPrint) {
+		System.out.println("Users:");
+		for (User UserToPrint : arrayToPrint) {
+			System.out.println(UserToPrint);
 		}
 		System.out.println("\n");
 	}

@@ -1,4 +1,4 @@
-package users;
+package expenses;
 
 import java.util.ArrayList;
 import java.util.Random;

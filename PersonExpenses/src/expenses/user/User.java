@@ -1,6 +1,8 @@
-package users;
+package expenses.user;
 
 import java.util.ArrayList;
+
+import expenses.Expense;
 
 public class User {
 

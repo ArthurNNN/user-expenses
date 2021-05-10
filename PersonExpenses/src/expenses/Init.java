@@ -1,4 +1,4 @@
-package users;
+package expenses;
 
 public class Init {
 

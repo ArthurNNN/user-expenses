@@ -10,15 +10,15 @@ public class ExpenseManagment {
 	}
 		
 
-	public static void createExpense(Person person) {
+	public static void createExpense(Expense expense) {
 		
 	}
 	
-	public static void updateExpense(Person person) {
+	public static void updateExpense(Expense expense) {
 		
 	}
 	
-	public static void deleteExpense(Person person) {
+	public static void deleteExpense(Expense expense) {
 		
 	}
 	

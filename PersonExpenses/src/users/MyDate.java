@@ -1,4 +1,4 @@
-package userExpenses;
+package users;
 
 public class MyDate {
 	

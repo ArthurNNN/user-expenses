@@ -1,4 +1,4 @@
-package wordsoperations;
+package accounts;
 
 public class Init {
 	// scope #1

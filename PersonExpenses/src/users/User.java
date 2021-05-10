@@ -10,6 +10,7 @@ public class User {
 	public int weigth;
 	public int heigth;
 	public double basicSalary;
+	
 	public ArrayList<Expense> expenses;
 
 	// Constructor from User Class

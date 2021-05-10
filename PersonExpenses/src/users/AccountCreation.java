@@ -1,4 +1,4 @@
-package accounts;
+package users;
 
 public class AccountCreation {
 	

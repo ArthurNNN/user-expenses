@@ -3,72 +3,40 @@ package expenses;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import expenses.account.AccountDeleting;
-import expenses.account.AccountManagment;
-import expenses.account.AccountUpdating;
+import expenses.user.User;
 import expenses.user.UserCreation;
 
 public class Controller {
 
 	public static void AppStarting() {
 
-		System.out.println("Enter you choice: ");
+		ArrayList<User> users = new ArrayList<User>();
+		
 		Scanner reader = new Scanner(System.in);
-
+		
 		while (true) {
-			String choice = reader.nextLine();
-
-//			1
-//			login
-//			create
-
-			UserCreation.createUser(null);
-
-//			2
-//			user
-//			password
-//			
-//			3
-//			expenses
-//			---
-//			---
-//			
-//			4
-//			createUser
-//			
-//			
-//			hasta 0
-
-			String userToCreateAccount = reader.nextLine();
-
-			ArrayList<String> account = new ArrayList<String>();
-
-			account.add(userToCreateAccount);
-
-			account = AccountManagment.createAccount(account);
-
-			boolean isValidated = Login.validateAccount(reader, account);
-
-			if (isValidated) {
-
-				Utils.printArray(account);
-
-				account = AccountUpdating.updateUser(reader, account);
-				account = AccountUpdating.updateEmail(reader, account);
-				account = AccountUpdating.updatePasswod(reader, account);
-
-				Utils.printArray(account);
-
-				// fake deleting ...
-				account = AccountDeleting.deleteAccount(account);
-
-				Utils.printArray(account);
-				isValidated = false;
+			menu();
+			String command = reader.nextLine();
+			if (command.equals("quit")) {
+				break;
+			} else if (command.equals("create")) {
+				UserCreation.createUser(reader, users);
 			}
-
-			reader.close();
-
+			// UserCreation.createuser(reader);
+			else if (command.equals("login")) {
+			}
+			// to-do login
+			else {
+				System.out.println("Please, you have to write \"create\", \"login\" or \"quit\". Try another time...");
+			}
 		}
+	}
+
+	public static void menu() {
+
+		System.out.println("Welcome to Expenses Managment! ");
+		System.out.println("------------------");
+		System.out.println("Enter 999 to exit. ");
 
 	}
 

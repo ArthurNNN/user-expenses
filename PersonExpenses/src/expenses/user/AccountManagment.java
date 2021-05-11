@@ -1,6 +1,8 @@
-package expenses.account;
+package expenses.user;
 
 import java.util.ArrayList;
+
+import expenses.Utils;
 
 public class AccountManagment {
 	// scope #3
@@ -12,10 +14,8 @@ public class AccountManagment {
 		String user = AccountCreation.createUser(account.get(0));
 		account.add(user);
 		
-		String email = AccountCreation.createEmail(account.get(0));
-		account.add(email);
 		
-		String password = AccountCreation.createPasswod();
+		String password = AccountCreation.createPassword();
 		account.add(password);
 		
 		AccountCreation.printUserAccount(user, email, password);
@@ -25,5 +25,7 @@ public class AccountManagment {
 		return account;
 		
 	}
+	
+
 
 }

@@ -7,7 +7,11 @@ import expenses.Expense;
 public class User {
 
 	// Fields from User Class
+
 	public String name;
+	public String surname;
+	public String login;
+	public String password;
 	public int age;
 	public int weigth;
 	public int heigth;
@@ -19,18 +23,20 @@ public class User {
 	public User() {
 	}
 
-	public User(String name, int age) {
+
+
+
+
+	public User(String name, String surname, int age) {
+		super();
 		this.name = name;
+		this.surname = surname;
 		this.age = age;
 	}
 
-	public User(String name, int age, int weigth, int heigth) {
-		super();
-		this.name = name;
-		this.age = age;
-		this.weigth = weigth;
-		this.heigth = heigth;
-	}
+
+
+
 
 	public User(String name, int age, int weigth, int heigth, double basicSalary) {
 		super();
@@ -42,15 +48,9 @@ public class User {
 		this.expenses = new ArrayList<Expense>();
 	}
 
-	public User(String name, int age, int weigth, int heigth, double basicSalary, ArrayList<Expense> expensesArr) {
-		super();
-		this.name = name;
-		this.age = age;
-		this.weigth = weigth;
-		this.heigth = heigth;
-		this.basicSalary = basicSalary;
-		this.expenses = expensesArr;
-	}
+
+	
+	
 
 	// Methods from User Class
 	public double salaryAfterExpenses() {
@@ -137,6 +137,10 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public void setSurname(String surname) {
+		this.name = surname;
 	}
 
 	public int getAge() {

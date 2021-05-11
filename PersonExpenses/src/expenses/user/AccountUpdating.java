@@ -1,4 +1,4 @@
-package expenses.account;
+package expenses.user;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -18,21 +18,11 @@ public class AccountUpdating {
 		
 	}
 
-	public static ArrayList<String> updateEmail(Scanner reader,  ArrayList<String> account) {
-		
-		System.out.println("\nEnter email  to update: ");
-		System.out.println("Old email: " + account.get(2));
-		System.out.print("New email: ");
-		String emailConsole = reader.next();
-		
-		account.set(2, emailConsole);
-		
-		return account;
-	}
+
 
 	public static  ArrayList<String> updatePasswod(Scanner reader, ArrayList<String> account) {
 
-		account.set(3,AccountCreation.createPasswod());
+		account.set(3,AccountCreation.createPassword());
 		
 		return  account;
 	}

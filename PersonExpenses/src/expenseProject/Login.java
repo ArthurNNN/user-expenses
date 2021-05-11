@@ -1,6 +1,5 @@
 package expenseProject;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Login {
@@ -15,28 +14,28 @@ public class Login {
 		
 		
 		int count = 1;
-		String userConsole;
+		String loginConsole;
 		String passwordConsole;
 		System.out.println("\nLogin:");
 
 		do {
 
-			System.out.println("\nEnter Username : ");
-			userConsole = reader.next();
+			System.out.println("\nEnter Login : ");
+			loginConsole = reader.next();
 
 			System.out.println("Enter Password : ");
 			passwordConsole = reader.next();
 
-			if (userConsole.equals(user) && passwordConsole.equals(password)) {
+			if (loginConsole.equals(user) && passwordConsole.equals(password)) {
 				System.out.println("Access Granted! Welcome!");
 				return true;
 
-			} else if (userConsole.equals(user)) {
+			} else if (loginConsole.equals(login)) {
 				System.out.println("Invalid Password!");
 			} else if (passwordConsole.equals(password)) {
-				System.out.println("Invalid Username!");
+				System.out.println("Invalid Login!");
 			} else {
-				System.out.println("Invalid Username & Password!");
+				System.out.println("Invalid Login & Password!");
 			}
 			
 			System.out.println("Total attempts: " + count + "/3");

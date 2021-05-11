@@ -1,30 +1,29 @@
 package expenseProject;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserUpdating {
 
-	public static ArrayList<String> updateUser(Scanner reader, ArrayList<String> User) {
+	public static User updateUser(Scanner reader, User user) {
 
-		System.out.println("\nEnter user name to update: ");
-		System.out.println("Old name: " + User.get(1));
+		System.out.println("\nEnter user login to update: ");
+		System.out.println("Old name: " + user.getName());
 		System.out.print("New name: ");
-		String userConsole = reader.next();
+		String nameConsole = reader.next();
 		
-		User.set(1, userConsole);
+		user.setName(nameConsole);
 		
-		return User;
+		return user;
 		
 	}
 
 
 
-	public static  ArrayList<String> updatePassword(Scanner reader, ArrayList<String> User) {
+	public static  User updatePassword(Scanner reader, User user) {
 
-		User.set(3,UserCreation.createPassword());
+		user.setPassword(UserCreation.createPassword());
 		
-		return  User;
+		return  user;
 	}
 
 }

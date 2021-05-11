@@ -6,43 +6,70 @@ import java.util.Scanner;
 import expenses.account.AccountDeleting;
 import expenses.account.AccountManagment;
 import expenses.account.AccountUpdating;
+import expenses.user.UserCreation;
 
 public class Controller {
 
 	public static void AppStarting() {
 
-		// scope #2
-		System.out.println("Enter Name and Surname: ");
+		System.out.println("Enter you choice: ");
 		Scanner reader = new Scanner(System.in);
 
-		String userToCreateAccount = reader.nextLine();
+		while (true) {
+			String choice = reader.nextLine();
 
-		ArrayList<String> account = new ArrayList<String>();
+//			1
+//			login
+//			create
 
-		account.add(userToCreateAccount);
+			UserCreation.createUser(null);
 
-		account = AccountManagment.createAccount(account);
+//			2
+//			user
+//			password
+//			
+//			3
+//			expenses
+//			---
+//			---
+//			
+//			4
+//			createUser
+//			
+//			
+//			hasta 0
 
-		boolean isValidated = Login.validateAccount(reader, account);
+			String userToCreateAccount = reader.nextLine();
 
-		if (isValidated) {
+			ArrayList<String> account = new ArrayList<String>();
 
-			Utils.printArray(account);
+			account.add(userToCreateAccount);
 
-			account = AccountUpdating.updateUser(reader, account);
-			account = AccountUpdating.updateEmail(reader, account);
-			account = AccountUpdating.updatePasswod(reader, account);
+			account = AccountManagment.createAccount(account);
 
-			Utils.printArray(account);
+			boolean isValidated = Login.validateAccount(reader, account);
 
-			// fake deleting ...
-			account = AccountDeleting.deleteAccount(account);
+			if (isValidated) {
 
-			Utils.printArray(account);
-			isValidated = false;
+				Utils.printArray(account);
+
+				account = AccountUpdating.updateUser(reader, account);
+				account = AccountUpdating.updateEmail(reader, account);
+				account = AccountUpdating.updatePasswod(reader, account);
+
+				Utils.printArray(account);
+
+				// fake deleting ...
+				account = AccountDeleting.deleteAccount(account);
+
+				Utils.printArray(account);
+				isValidated = false;
+			}
+
+			reader.close();
+
 		}
 
-		reader.close();
 	}
 
 }

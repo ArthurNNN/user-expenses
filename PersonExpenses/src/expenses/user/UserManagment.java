@@ -11,9 +11,7 @@ public class UserManagment {
 	// Constructor from User Class
 	
 
-	public static void createUser(User User) {
-		
-	}
+
 	
 	public static void updateUser(User User) {
 		

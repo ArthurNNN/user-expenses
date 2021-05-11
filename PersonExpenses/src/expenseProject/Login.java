@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class Login {
 
-	public static boolean validateUser (Scanner reader, ArrayList<String> User) {
+	public static boolean validateUser (Scanner reader, User user) {
 
 		//System.out.println(user);
 		//System.out.println(password);
 
-		String user = User.get(1);
-		String password = User.get(3);
+		String login = user.getLogin();
+		String password = user.getPassword();
 		
 		
 		int count = 1;

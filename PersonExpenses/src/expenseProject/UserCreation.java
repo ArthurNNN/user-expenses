@@ -11,18 +11,28 @@ public class UserCreation {
 
 		User newUser = new User();
 		System.out.println("Tell me your name: ");
-		newUser.setName(reader.nextLine());
+		String name = reader.nextLine();
+		newUser.setName(name);
 
 		System.out.println("Tell me your surname: ");
-		newUser.setSurname(reader.nextLine());
-		System.out.println("Tell me your age: ");
-		newUser.setAge(reader.nextInt());
+		String surname = reader.nextLine();
+		newUser.setSurname(surname);
+
+		String login = (name + surname).toLowerCase();
+		newUser.setLogin(login);
+
+		String password = createPassword();
+		newUser.setPassword(password);
+
+		System.out.println("Your login is: ");
+
+//		System.out.println("Tell me your age: ");
+//		newUser.setAge(reader.nextInt());
 
 		// to-do methods create user and password
 		users.add(newUser);
 	}
-	
-	
+
 //	public static ArrayList<String> createUser(ArrayList<String> User) {
 //		// scope #4
 //
@@ -45,19 +55,18 @@ public class UserCreation {
 //		// TODO Auto-generated method stub
 //		return null;
 //	}
-	
+
 	public static String createPassword() {
 		// scope #7
 
 		String password = "";
 
-		password = password + Utils.createCharRandom() + Utils.createIntRandom(10000)
-		+ Utils.createCharRandom() + Utils.createCharRandom()
-				+ Utils.createIntRandom(596);
+		password = password + Utils.createCharRandom() + Utils.createIntRandom(10000) + Utils.createCharRandom()
+				+ Utils.createCharRandom() + Utils.createIntRandom(596);
 
 		return password;
 	}
-	
+
 	public static void printUser(String user, String password) {
 		// scope #8
 
@@ -67,13 +76,12 @@ public class UserCreation {
 
 	}
 
-	public static String userToString (String user, String password) {
-		
+	public static String userToString(String user, String password) {
+
 		String UserToString = user + "-" + password;
-		
+
 		return UserToString;
-		
-		
+
 	}
 
 }

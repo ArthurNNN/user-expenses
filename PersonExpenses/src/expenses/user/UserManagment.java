@@ -4,32 +4,29 @@ import java.util.ArrayList;
 
 public class UserManagment {
 
-	// Fields from Person Class
+	// Fields from User Class
 
-	public ArrayList<User> persons;
+	public ArrayList<User> Users;
 
-	// Constructor from Person Class
+	// Constructor from User Class
 	
 
-	public static void createPerson(User person) {
+	public static void createUser(User User) {
 		
 	}
 	
-	public static void updatePerson(User person) {
+	public static void updateUser(User User) {
 		
 	}
 	
-	public static void deletePerson(User person) {
+	public static void deleteUser(User User) {
 		
 	}
 	
-	public static void printAllPersons(ArrayList<User> persons) {
+	public static void printAllUsers(ArrayList<User> Users) {
 		
 	}
 	
 	
-	
-	
-
-
 }
+

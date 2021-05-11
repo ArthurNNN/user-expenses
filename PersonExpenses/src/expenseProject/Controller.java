@@ -33,7 +33,7 @@ public class Controller {
 
 		System.out.println("Welcome to Expenses Managment! ");
 		System.out.println("------------------");
-		System.out.println("Enter 999 to exit. ");
+		System.out.println("Write \"create\", \"login\" or \"quit\". ");
 
 	}
 

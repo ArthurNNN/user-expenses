@@ -23,28 +23,28 @@ public class UserCreation {
 	}
 	
 	
-	public static ArrayList<String> createUser(ArrayList<String> User) {
-		// scope #4
-
-		String user = UserCreation.createUser(User.get(0));
-		User.add(user);
-		
-		
-		String password = UserCreation.createPassword();
-		User.add(password);
-		
-		UserCreation.printUser(user, password);
-		
-		
-		
-		return User;
-		
-	}
-
-	public static String createUser(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public static ArrayList<String> createUser(ArrayList<String> User) {
+//		// scope #4
+//
+//		String user = UserCreation.createUser(User.get(0));
+//		User.add(user);
+//		
+//		
+//		String password = UserCreation.createPassword();
+//		User.add(password);
+//		
+//		UserCreation.printUser(user, password);
+//		
+//		
+//		
+//		return User;
+//		
+//	}
+//
+//	public static String createUser(String string) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 	
 	public static String createPassword() {
 		// scope #7

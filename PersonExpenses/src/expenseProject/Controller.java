@@ -1,10 +1,7 @@
-package expenses;
+package expenseProject;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import expenses.user.User;
-import expenses.user.UserCreation;
 
 public class Controller {
 

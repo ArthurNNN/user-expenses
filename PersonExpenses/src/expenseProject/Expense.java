@@ -1,4 +1,4 @@
-package expenses;
+package expenseProject;
 
 public class Expense {
 	public String title;

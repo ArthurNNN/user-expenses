@@ -1,4 +1,4 @@
-package expenses;
+package expenseProject;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,8 +1,6 @@
-package expenses;
+package expenseProject;
 
 import java.util.ArrayList;
-
-import expenses.user.User;
 
 public class TestUser {
 	public static void executeUser() {

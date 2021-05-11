@@ -1,4 +1,4 @@
-package expenses;
+package expenseProject;
 
 public class MyDate {
 	

@@ -61,15 +61,15 @@ public class UserCreation {
 	public static void printUser(String user, String password) {
 		// scope #8
 
-		System.out.println("User User: ");
-		System.out.println("User : " + user);
+		System.out.println("User info: ");
+		System.out.println("Login : " + user);
 		System.out.println("Password: " + password);
 
 	}
 
-	public static String userToString (String user, String email, String password) {
+	public static String userToString (String user, String password) {
 		
-		String UserToString = user + "-" + email + "-" + password;
+		String UserToString = user + "-" + password;
 		
 		return UserToString;
 		

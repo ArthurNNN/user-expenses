@@ -5,11 +5,10 @@ import java.util.ArrayList;
 public class User {
 
 	// Fields from User Class
-
-	public String name;
-	public String surname;
 	public String login;
+	public String name;
 	public String password;
+	public String surname;	
 	public int age;
 	public int weigth;
 	public int heigth;
@@ -129,55 +128,158 @@ public class User {
 	}
 
 	// Getters and Setters and toString
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 	
-	public void setSurname(String surname) {
-		this.name = surname;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public int getWeigth() {
-		return weigth;
-	}
-
-	public void setWeigth(int weigth) {
-		this.weigth = weigth;
-	}
-
-	public int getHeigth() {
-		return heigth;
-	}
-
-	public void setHeigth(int heigth) {
-		this.heigth = heigth;
-	}
-
-	public double getBasicSalary() {
-		return basicSalary;
-	}
-
-	public void setBasicSalary(double basicSalary) {
-		this.basicSalary = basicSalary;
-	}
-
+	
+	
 	// toString
 	@Override
 	public String toString() {
 		return "User Data Fields:\n  name=" + name + ", age=" + age + ", weigth=" + weigth + ", heigth=" + heigth
 				+ ", basicSalary=" + basicSalary + "\n";
+	}
+
+
+
+
+
+	public String getLogin() {
+		return login;
+	}
+
+
+
+
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+
+
+	public String getSurname() {
+		return surname;
+	}
+
+
+
+
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
+
+
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+
+
+
+	public int getWeigth() {
+		return weigth;
+	}
+
+
+
+
+
+	public void setWeigth(int weigth) {
+		this.weigth = weigth;
+	}
+
+
+
+
+
+	public int getHeigth() {
+		return heigth;
+	}
+
+
+
+
+
+	public void setHeigth(int heigth) {
+		this.heigth = heigth;
+	}
+
+
+
+
+
+	public double getBasicSalary() {
+		return basicSalary;
+	}
+
+
+
+
+
+	public void setBasicSalary(double basicSalary) {
+		this.basicSalary = basicSalary;
+	}
+
+
+
+
+
+	public ArrayList<Expense> getExpenses() {
+		return expenses;
+	}
+
+
+
+
+
+	public void setExpenses(ArrayList<Expense> expenses) {
+		this.expenses = expenses;
 	}
 
 }

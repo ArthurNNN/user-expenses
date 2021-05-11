@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class Login {
 
-	public static boolean validateAccount (Scanner reader, ArrayList<String> account) {
+	public static boolean validateUser (Scanner reader, ArrayList<String> User) {
 
 		//System.out.println(user);
 		//System.out.println(password);
 
-		String user = account.get(1);
-		String password = account.get(3);
+		String user = User.get(1);
+		String password = User.get(3);
 		
 		
 		int count = 1;
@@ -42,7 +42,7 @@ public class Login {
 			System.out.println("Total attempts: " + count + "/3");
 			count++;
 
-			if (count == 4) System.out.println("Account blocked!");
+			if (count == 4) System.out.println("User blocked!");
 			
 		} while (count < 4);
 		

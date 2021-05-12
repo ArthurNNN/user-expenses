@@ -6,15 +6,7 @@ import java.util.Scanner;
 public class LoginController {
 	
 	
-	public static User findUserByLogin(String login, ArrayList<User> users) {
-		for (User user : users) {
-			if (user.getLogin().equals(login)) {
-				return user;
-			}
-		}
-		System.out.println("User with login "+login+"no exists!");
-		return null;
-	}
+
 	
 	public static boolean Login (Scanner reader, ArrayList<User> users) {
 
@@ -38,12 +30,12 @@ public class LoginController {
 			System.out.println("Enter Password : ");
 			passwordConsole = reader.next();
 			
-			User user = findUserByLogin(loginConsole, users);
+			User user = Utils.findUserByLogin(loginConsole, users);
 			
 			login = user.getLogin();
 			password = user.getPassword();
 
-			if (loginConsole.equals(user) && passwordConsole.equals(password)) {
+			if (loginConsole.equals(login) && passwordConsole.equals(password)) {
 				System.out.println("Access Granted! Welcome!");
 				return true;
 

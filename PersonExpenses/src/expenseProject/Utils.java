@@ -30,6 +30,16 @@ public class Utils {
 		return charRandom;
 
 	}
+	
+	public static User findUserByLogin(String login, ArrayList<User> users) {
+		for (User user : users) {
+			if (user.getLogin().equals(login)) {
+				return user;
+			}
+		}
+		System.out.println("User with login "+login+"no exists!");
+		return null;
+	}
 
 	public static String fromStringToUser(String account) {
 

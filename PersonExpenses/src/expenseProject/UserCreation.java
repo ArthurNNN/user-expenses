@@ -24,13 +24,14 @@ public class UserCreation {
 		String password = createPassword();
 		newUser.setPassword(password);
 
-		System.out.println("Your login is: ");
+//		System.out.println("Your login is: ");
 
 //		System.out.println("Tell me your age: ");
 //		newUser.setAge(reader.nextInt());
 
 		// to-do methods create user and password
 		users.add(newUser);
+		printUserLoginAndPassword(newUser);
 	}
 
 //	public static ArrayList<String> createUser(ArrayList<String> User) {
@@ -67,12 +68,12 @@ public class UserCreation {
 		return password;
 	}
 
-	public static void printUser(String user, String password) {
+	public static void printUserLoginAndPassword(User user) {
 		// scope #8
 
 		System.out.println("User info: ");
-		System.out.println("Login : " + user);
-		System.out.println("Password: " + password);
+		System.out.println("Login : " + user.getLogin());
+		System.out.println("Password: " + user.getPassword());
 
 	}
 

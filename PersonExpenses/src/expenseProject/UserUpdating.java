@@ -12,7 +12,7 @@ public class UserUpdating {
 //		System.out.print("New name: ");
 		String loginConsole = reader.next();
 		
-		User user = findUserByLogin( loginConsole, users);
+		User user = Utils.findUserByLogin( loginConsole, users);
 
 //		user.setName(nameConsole);
 
@@ -20,14 +20,7 @@ public class UserUpdating {
 
 	}
 
-	public static User findUserByLogin(String login, ArrayList<User> users) {
-		for (User user : users) {
-			if (user.getLogin().equals(login)) {
-				return user;
-			}
-		}
-		return null;
-	}
+
 
 	public static User updatePassword(Scanner reader, User user) {
 

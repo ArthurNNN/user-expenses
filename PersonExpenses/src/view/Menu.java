@@ -4,9 +4,8 @@ public class Menu {
 	
 	public static void mainMenu() {
 		// TODO Auto-generated method stub
-		System.out.println("Welcome to Expenses Managment! ");
-		System.out.println("------------------");
-		System.out.println("Enter your choice:");
+
+		System.out.println("\nEnter your choice:");
 		System.out.println("1 - To logIn");
 		System.out.println("2 - To create a new user account / SingUp");
 		System.out.println("3 - To edit/update an existing user account:");

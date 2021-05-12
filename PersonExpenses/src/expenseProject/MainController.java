@@ -8,6 +8,9 @@ import view.Menu;
 public class MainController {
 
 	public static void AppStarting() {
+		
+		System.out.println("Welcome to Expenses Managment! ");
+		System.out.println("------------------");
 
 		ArrayList<User> users = new ArrayList<User>();
 
@@ -22,6 +25,7 @@ public class MainController {
 				// to-do login
 				LoginController.Login(reader, users);
 			}
+			
 			// Creation user;
 			else if (command.equals("2")) {
 				
@@ -33,8 +37,9 @@ public class MainController {
 			}
 
 			else {
-				System.out.println("Please, put 1 to Create, 2 to Login or 3 to quit. Try another time...");
+				System.out.println("Please, put 1 to Login, 2 to Create, 3 to Update, 0 to Exit. Try another time...");
 			}
+			System.out.println("------------------");
 		}
 	}
 

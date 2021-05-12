@@ -113,11 +113,5 @@ public class TestUser {
 		System.out.println("Expenses: " + isa.calculateExpenses(5));
 	}
 
-	private static void printUsers(ArrayList<User> arrayToPrint) {
-		System.out.println("Users:");
-		for (User UserToPrint : arrayToPrint) {
-			System.out.println(UserToPrint);
-		}
-		System.out.println("\n");
-	}
+
 }

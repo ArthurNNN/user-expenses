@@ -3,7 +3,7 @@ package expenseProject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import view.Menu;
+import view.*;
 
 public class MainController {
 
@@ -19,32 +19,24 @@ public class MainController {
 		while (true) {
 			Menu.mainMenu();
 			String command = reader.nextLine();
-			if (command.equals("0")) {
-				break;
-			} else if (command.equals("1")) {
 
+			if (command.equals("1")) {
 				users = UserCreation.createUser(reader, users);
-			}
 
-			// Creation user;
-			else if (command.equals("2")) {
-
-			// login
+			} else if (command.equals("2")) {
 				LoginController.Login(reader, users);
 
 			} else if (command.equals("3")) {
 				users = UserUpdating.updateUser(reader, users);
-				break;
+
 			} else if (command.equals("4")) {
 				users = UserDeleting.deleteUser(reader, users);
 
+			} else if (command.equals("5")) {
+				UserManagment.printAllUsers(users);
+			} else {
+				break;
 			}
-
-//			else {
-//				System.out.println("Please, put 1 to Create, 2 to Login, 3 to Update, 0 to Exit. Try another time...");
-//			}
-//			System.out.println("------------------");
 		}
 	}
-
 }

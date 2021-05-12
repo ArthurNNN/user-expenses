@@ -23,7 +23,7 @@ public class MainController {
 				break;
 			} else if (command.equals("1")) {
 
-				UserCreation.createUser(reader, users);
+				users = UserCreation.createUser(reader, users);
 			}
 
 			// Creation user;
@@ -33,8 +33,11 @@ public class MainController {
 				LoginController.Login(reader, users);
 
 			} else if (command.equals("3")) {
-				UserUpdating.updateUser(reader, users);
+				users = UserUpdating.updateUser(reader, users);
 				break;
+			} else if (command.equals("4")) {
+				users = UserDeleting.deleteUser(reader, users);
+
 			}
 
 //			else {

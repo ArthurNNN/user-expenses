@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 public class UserCreation {
 
-	public static void createUser(Scanner reader, ArrayList<User> users)
-
-	{
+	public static ArrayList<User> createUser(Scanner reader, ArrayList<User> users) {
 
 		User newUser = new User();
 		System.out.println("Tell me your name: ");
@@ -32,6 +30,8 @@ public class UserCreation {
 		// to-do methods create user and password
 		users.add(newUser);
 		printUserLoginAndPassword(newUser);
+
+		return users;
 	}
 
 //	public static ArrayList<String> createUser(ArrayList<String> User) {

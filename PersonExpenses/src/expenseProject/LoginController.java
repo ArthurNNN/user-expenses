@@ -9,27 +9,29 @@ public class LoginController {
 
 		String login;
 		String password;
+		User user;
 
 		int count = 1;
 		String loginConsole;
 		String passwordConsole;
 
 		do {
-//			boolean err = false;
-//			do {
+			do {
 
-			System.out.println("\nEnter Login : ");
-			loginConsole = reader.next();
+				System.out.println("\nEnter Login : ");
+				loginConsole = reader.next();
 
-			System.out.println("Enter Password : ");
-			passwordConsole = reader.next();
+				System.out.println("Enter Password : ");
+				passwordConsole = reader.next();
 
-			User user = Utils.findUserByLogin(loginConsole, users);
-//
-//				if (user == null) {
-//					err = true;
-//					System.out.println("User not found, enter correct login please.");
-//				}
+				user = Utils.findUserByLogin(loginConsole, users);
+
+				if (user != null) {
+					break;
+				}
+
+				System.out.println("User not found, enter correct login please.");
+			} while (user == null);
 
 			login = user.getLogin();
 			password = user.getPassword();

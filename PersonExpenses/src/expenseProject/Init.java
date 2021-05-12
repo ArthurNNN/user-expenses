@@ -4,7 +4,7 @@ public class Init {
 
 	public static void main(String[] args) {
 
-		Controller.AppStarting();
+		MainController.AppStarting();
 
 
 //		TestUser.executeUser();

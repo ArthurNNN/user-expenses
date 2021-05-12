@@ -11,7 +11,7 @@ public class TestUser {
 
 		User sergi = new User();
 
-		User isa = new User("Isabel", 18);
+//		User isa = new User("Isabel", 18);
 
 		User toni = new User("Antonio", 30, 80, 180, 2000);
 
@@ -80,13 +80,13 @@ public class TestUser {
 
 		ArrayList<User> users = new ArrayList<>();
 
-		User alexa = new User("Alexa", 25, 60, 170);
-		User jack = new User("Jackson Pollock", 35);
+//		User alexa = new User("Alexa", 25, 60, 170);
+//		User jack = new User("Jackson Pollock", 35);
 		User marc = new User();
 
-		users.add(alexa);
+//		users.add(alexa);
 		users.add(marc);
-		users.add(jack);
+//		users.add(jack);
 
 		printUsers(users);
 	}

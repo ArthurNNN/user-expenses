@@ -3,40 +3,41 @@ package expenseProject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Controller {
+import view.Menu;
+
+public class MainController {
 
 	public static void AppStarting() {
 
 		ArrayList<User> users = new ArrayList<User>();
-		
+
 		Scanner reader = new Scanner(System.in);
-		
+
 		while (true) {
-			menu();
+			Menu.mainMenu();
 			String command = reader.nextLine();
-			if (command.equals("quit")) {
+			if (command.equals("0")) {
 				break;
 			} else if (command.equals("1")) {
-				UserCreation.createUser(reader, users);
+				// to-do login
+				LoginComtroller
 			}
-			// UserCreation.createuser(reader);
+			// Creation user;
 			else if (command.equals("2")) {
+				
+				UserCreation.createUser(reader, users);
+				
 			} else if (command.equals("3")) {
+				UserUpdating.updateUser(reader, users);
 				break;
 			}
-			// to-do login
+
 			else {
 				System.out.println("Please, put 1 to Create, 2 to Login or 3 to quit. Try another time...");
 			}
 		}
 	}
 
-	public static void menu() {
 
-		System.out.println("Welcome to Expenses Managment! ");
-		System.out.println("------------------");
-		System.out.println("Put 1 to Create, 2 to Login or 3 to quit");
-
-	}
 
 }

@@ -88,7 +88,7 @@ public class TestUser {
 		users.add(marc);
 //		users.add(jack);
 
-		printUsers(users);
+//		UserManagment.pri(users);
 	}
 
 	public static void testExpensesUser() {

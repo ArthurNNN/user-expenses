@@ -16,6 +16,9 @@ public class MainController {
 
 		Scanner reader = new Scanner(System.in);
 
+		users.add(new User("Max", "Pain", "maxpain", "123qwe"));
+		users.add(new User("Uma", "Thurman", "umathurman", "123qwe"));
+
 		while (true) {
 			Menu.mainMenu();
 			String command = reader.nextLine();
@@ -25,6 +28,7 @@ public class MainController {
 
 			} else if (command.equals("2")) {
 				LoginController.Login(reader, users);
+				ExpenseController();
 
 			} else if (command.equals("3")) {
 				users = UserUpdating.updateUser(reader, users);
@@ -34,7 +38,7 @@ public class MainController {
 
 			} else if (command.equals("5")) {
 				UserManagment.printAllUsers(users);
-				
+
 			} else if (command.equals("0")) {
 				break;
 			}

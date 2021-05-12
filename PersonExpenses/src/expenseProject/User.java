@@ -20,6 +20,14 @@ public class User {
 	public User() {
 	}
 
+	public User(String name, String surname, String login, String password) {
+		super();
+		this.login = login;
+		this.name = name;
+		this.password = password;
+		this.surname = surname;
+	}
+
 	public User(String name, String surname, int age) {
 		super();
 		this.name = name;
@@ -116,14 +124,6 @@ public class User {
 	}
 
 	// Getters and Setters and toString
-
-	// toString
-	@Override
-	public String toString() {
-		return "User Data Fields:\n  name=" + name + ", age=" + age + ", weigth=" + weigth + ", heigth=" + heigth
-				+ ", basicSalary=" + basicSalary + "\n";
-	}
-
 	public String getLogin() {
 		return login;
 	}
@@ -196,4 +196,8 @@ public class User {
 		this.expenses = expenses;
 	}
 
+	@Override
+	public String toString() {
+		return "login=" + login + ", name=" + name + ", surname=" + surname;
+	}
 }

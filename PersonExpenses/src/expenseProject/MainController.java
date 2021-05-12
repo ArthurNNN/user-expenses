@@ -8,7 +8,7 @@ import view.Menu;
 public class MainController {
 
 	public static void AppStarting() {
-		
+
 		System.out.println("Welcome to Expenses Managment! ");
 		System.out.println("------------------");
 
@@ -22,27 +22,26 @@ public class MainController {
 			if (command.equals("0")) {
 				break;
 			} else if (command.equals("1")) {
-				// to-do login
-				LoginController.Login(reader, users);
+
+				UserCreation.createUser(reader, users);
 			}
-			
+
 			// Creation user;
 			else if (command.equals("2")) {
-				
-				UserCreation.createUser(reader, users);
-				
+
+				// login
+				LoginController.Login(reader, users);
+
 			} else if (command.equals("3")) {
 				UserUpdating.updateUser(reader, users);
 				break;
 			}
 
 			else {
-				System.out.println("Please, put 1 to Login, 2 to Create, 3 to Update, 0 to Exit. Try another time...");
+				System.out.println("Please, put 1 to Create, 2 to Login, 3 to Update, 0 to Exit. Try another time...");
 			}
-			System.out.println("------------------");
+//			System.out.println("------------------");
 		}
 	}
-
-
 
 }

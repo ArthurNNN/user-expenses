@@ -20,7 +20,6 @@ public class LoginController {
 		int count = 1;
 		String loginConsole;
 		String passwordConsole;
-		System.out.println("\nLogin:");
 
 		do {
 

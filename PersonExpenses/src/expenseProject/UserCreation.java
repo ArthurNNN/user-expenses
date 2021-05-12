@@ -70,7 +70,7 @@ public class UserCreation {
 
 	public static void printUserLoginAndPassword(User user) {
 		// scope #8
-
+		System.out.println("\n------------------");
 		System.out.println("User info: ");
 		System.out.println("Login : " + user.getLogin());
 		System.out.println("Password: " + user.getPassword());

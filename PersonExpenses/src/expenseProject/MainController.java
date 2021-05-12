@@ -20,7 +20,7 @@ public class MainController {
 				break;
 			} else if (command.equals("1")) {
 				// to-do login
-				LoginComtroller
+				LoginController.Login(reader, users);
 			}
 			// Creation user;
 			else if (command.equals("2")) {

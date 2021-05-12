@@ -62,8 +62,8 @@ public class UserCreation {
 
 		String password = "";
 
-		password = password + Utils.createCharRandom() + Utils.createIntRandom(10000) + Utils.createCharRandom()
-				+ Utils.createCharRandom() + Utils.createIntRandom(596);
+		password = password + Utils.createCharRandom() + Utils.createIntRandom(100) + Utils.createCharRandom()
+				+ Utils.createIntRandom(100);
 
 		return password;
 	}

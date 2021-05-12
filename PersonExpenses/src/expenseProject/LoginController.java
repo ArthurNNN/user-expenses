@@ -5,17 +5,24 @@ import java.util.Scanner;
 
 public class LoginController {
 	
-	public static void Login(Scanner reader, ArrayList<User> users) {
-		
+	
+	public static User findUserByLogin(String login, ArrayList<User> users) {
+		for (User user : users) {
+			if (user.getLogin().equals(login)) {
+				return user;
+			}
+		}
+		System.out.println("User with login "+login+"no exists!");
+		return null;
 	}
 	
-	public static boolean validateUser (Scanner reader, User user) {
+	public static boolean Login (Scanner reader, ArrayList<User> users) {
 
 		//System.out.println(user);
 		//System.out.println(password);
 
-		String login = user.getLogin();
-		String password = user.getPassword();
+		String login;
+		String password;
 		
 		
 		int count = 1;
@@ -30,6 +37,11 @@ public class LoginController {
 
 			System.out.println("Enter Password : ");
 			passwordConsole = reader.next();
+			
+			User user = findUserByLogin(loginConsole, users);
+			
+			login = user.getLogin();
+			password = user.getPassword();
 
 			if (loginConsole.equals(user) && passwordConsole.equals(password)) {
 				System.out.println("Access Granted! Welcome!");

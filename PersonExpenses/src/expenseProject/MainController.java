@@ -34,7 +34,8 @@ public class MainController {
 
 			} else if (command.equals("5")) {
 				UserManagment.printAllUsers(users);
-			} else {
+				
+			} else if (command.equals("0")) {
 				break;
 			}
 		}

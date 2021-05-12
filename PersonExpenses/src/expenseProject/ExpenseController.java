@@ -7,7 +7,7 @@ import view.Menu;
 
 public class ExpenseController {
 
-	public static void ExpenseProcessing(Scanner reader, User user) {
+	public static void start(Scanner reader, User user) {
 
 		ArrayList<Expense> expenses;
 
@@ -37,17 +37,17 @@ public class ExpenseController {
 	}
 
 	public static ArrayList<Expense> addExpense(Scanner reader, User user) {
-		
+
 		ArrayList<Expense> expenses = user.getExpenses();
-		
+
 		return expenses;
 
 	}
 
 	public static ArrayList<Expense> deleteExpense(Scanner reader, User user) {
-		
+
 		ArrayList<Expense> expenses = user.getExpenses();
-		
+
 		return expenses;
 
 	}

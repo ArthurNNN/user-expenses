@@ -28,7 +28,7 @@ public class MainController {
 
 			} else if (command.equals("2")) {
 				LoginController.Login(reader, users);
-				ExpenseController();
+				
 
 			} else if (command.equals("3")) {
 				users = UserUpdating.updateUser(reader, users);

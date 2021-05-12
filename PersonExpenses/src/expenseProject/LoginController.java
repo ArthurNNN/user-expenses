@@ -60,6 +60,8 @@ public class LoginController {
 
 		} while (count < 4);
 
+		ExpenseController.start(reader, user);
+
 		return false;
 	}
 

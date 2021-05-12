@@ -9,7 +9,7 @@ public class ExpenseController {
 
 	public static void start(Scanner reader, User user) {
 
-		ArrayList<Expense> expenses;
+		ArrayList<Expense> expenses = user.getExpenses();
 
 //		Menu.printExpenseMenu();
 

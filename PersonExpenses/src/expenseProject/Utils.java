@@ -37,7 +37,7 @@ public class Utils {
 				return user;
 			}
 		}
-		System.out.println("User with login "+login+"no exists!");
+		System.out.println("User with login "+ login +" no exists!");
 		return null;
 	}
 

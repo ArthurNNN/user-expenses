@@ -6,15 +6,6 @@ public class Init {
 
 		MainController.AppStarting();
 
-
-//		TestUser.executeUser();
-//
-//		TestUser.testMethodsObjectsUser();
-//
-//		TestUser.testExpensesUser();
-//
-//		TestUser.testListObjectsUser();
-
 		System.out.println("\nBye, bye my friend...");
 	}
 

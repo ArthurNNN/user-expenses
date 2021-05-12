@@ -29,7 +29,7 @@ public class MainController {
 			// Creation user;
 			else if (command.equals("2")) {
 
-				// login
+			// login
 				LoginController.Login(reader, users);
 
 			} else if (command.equals("3")) {
@@ -37,9 +37,9 @@ public class MainController {
 				break;
 			}
 
-			else {
-				System.out.println("Please, put 1 to Create, 2 to Login, 3 to Update, 0 to Exit. Try another time...");
-			}
+//			else {
+//				System.out.println("Please, put 1 to Create, 2 to Login, 3 to Update, 0 to Exit. Try another time...");
+//			}
 //			System.out.println("------------------");
 		}
 	}

@@ -1,4 +1,4 @@
-package expenseProject;
+package model;
 
 public class MyDate {
 	

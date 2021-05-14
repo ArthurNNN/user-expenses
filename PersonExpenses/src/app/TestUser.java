@@ -1,6 +1,10 @@
-package expenseProject;
+package app;
 
 import java.util.ArrayList;
+
+import model.Expense;
+import model.MyDate;
+import model.User;
 
 public class TestUser {
 	public static void executeUser() {

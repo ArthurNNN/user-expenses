@@ -1,7 +1,9 @@
-package expenseProject;
+package app;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import model.User;
 
 public class Utils {
 

@@ -1,8 +1,9 @@
-package expenseProject;
+package app;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.User;
 import view.*;
 
 public class MainController {
@@ -20,7 +21,7 @@ public class MainController {
 		users.add(new User("Uma", "Thurman", "umathurman", "123qwe"));
 
 		while (true) {
-			Menu.mainMenu();
+			MenuController.mainMenu();
 			String command = reader.nextLine();
 
 			if (command.equals("1")) {

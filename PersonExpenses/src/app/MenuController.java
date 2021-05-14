@@ -1,17 +1,12 @@
-package view;
+package app;
 
 import java.util.Scanner;
 
-import expenseProject.LoginController;
-import expenseProject.User;
-import expenseProject.UserCreation;
-import expenseProject.UserDeleting;
-import expenseProject.UserManagment;
-import expenseProject.UserUpdating;
+public class MenuController {
+	
+	
 
-public class Menu {
-
-	public static void mainMenu() {
+	public static void mainMenu(String tag) {
 		// TODO Auto-generated method stub
 		System.out.println("\n --- Main menu ---");
 		System.out.println("Enter your choice:");

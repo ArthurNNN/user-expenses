@@ -1,9 +1,10 @@
-package expenseProject;
+package app;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import view.Menu;
+import model.Expense;
+import model.User;
 
 public class ExpenseController {
 
@@ -16,7 +17,7 @@ public class ExpenseController {
 		expenses = new ArrayList<Expense>();
 
 		while (true) {
-			Menu.expenseMenu();
+			MenuController.expenseMenu();
 			String command = reader.nextLine();
 
 			if (command.equals("1")) {

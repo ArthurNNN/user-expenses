@@ -1,4 +1,4 @@
-package expenseProject;
+package app;
 
 public class Init {
 
@@ -6,7 +6,7 @@ public class Init {
 
 		MainController.AppStarting();
 
-		System.out.println("\nBye, bye my friend...");
+		System.out.println("\nFinishing and closing expenses project ...");
 	}
 
 }

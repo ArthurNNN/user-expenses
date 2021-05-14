@@ -1,11 +1,13 @@
-package expenseProject;
+package app;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.User;
+
 public class LoginController {
 
-	public static boolean Login(Scanner reader, ArrayList<User> users) {
+	public static boolean validateUser(Scanner reader, ArrayList<User> users) {
 
 		String login;
 		String password;

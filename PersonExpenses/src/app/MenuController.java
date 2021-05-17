@@ -2,11 +2,13 @@ package app;
 
 import java.util.Scanner;
 
+import model.Language;
+
 public class MenuController {
 	
 	
 
-	public static void mainMenu(String tag) {
+	public static void mainMenu(Language language) {
 		// TODO Auto-generated method stub
 		System.out.println("\n --- Main menu ---");
 		System.out.println("Enter your choice:");
@@ -21,6 +23,7 @@ public class MenuController {
 
 
 	public static void expenseMenu() {
+
 		System.out.println("\n --- Expense menu ---");
 		System.out.println("Enter your choice:");
 		System.out.println("1 - To add a new user expense");

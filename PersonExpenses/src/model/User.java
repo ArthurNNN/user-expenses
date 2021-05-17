@@ -45,6 +45,9 @@ public class User {
 		this.expenses = new ArrayList<Expense>();
 	}
 
+	
+	
+	
 	// Methods from User Class
 	public double salaryAfterExpenses() {
 
@@ -198,6 +201,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "login=" + login + ", name=" + name + ", surname=" + surname;
+		return "User [login=" + login + ", name=" + name + ", password=" + password + ", surname=" + surname + ", age="
+				+ age + ", weigth=" + weigth + ", heigth=" + heigth + ", basicSalary=" + basicSalary + ", \nexpenses="
+				+ expenses + "]";
 	}
+
 }

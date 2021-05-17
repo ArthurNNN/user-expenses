@@ -51,11 +51,11 @@ public class Utils {
 		return user;
 	}
 
-	public static void printArray(ArrayList<String> arrayToPrint) {
+	public static void printArray(ArrayList<?> arrayToPrint) {
 
-		System.out.println("\nAccount:");
+		System.out.println("\nList of elements:");
 
-		for (String elementToPrint : arrayToPrint) {
+		for (Object elementToPrint : arrayToPrint) {
 			System.out.println(elementToPrint);
 		}
 		System.out.println("\n");

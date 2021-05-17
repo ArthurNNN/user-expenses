@@ -32,4 +32,13 @@ public class MenuController {
 		System.out.println("0 - To quit to main menu");
 	}
 
+
+	public static void LanguagesMenu(String tag) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
 }

@@ -7,10 +7,58 @@ public class Language {
 	String login;
 	String language;
 	String quit;
+	String namePhrase;
+	String surnamePhrase;
+	public String getNamePhrase() {
+		return namePhrase;
+	}
+
+
+	public void setNamePhrase(String namePhrase) {
+		this.namePhrase = namePhrase;
+	}
+
+
+	public String getSurnamePhrase() {
+		return surnamePhrase;
+	}
+
+
+	public void setSurnamePhrase(String surnamePhrase) {
+		this.surnamePhrase = surnamePhrase;
+	}
+
+
+	public String getAgePhrase() {
+		return agePhrase;
+	}
+
+
+	public void setAgePhrase(String agePhrase) {
+		this.agePhrase = agePhrase;
+	}
+
+
+	String agePhrase;
 	
 	
 	public Language() {
 		super();
+	}
+
+
+	public Language(String langName, String tag, String create, String login, String language, String quit,
+			String namePhrase, String surnamePhrase, String agePhrase) {
+		super();
+		this.langName = langName;
+		this.tag = tag;
+		this.create = create;
+		this.login = login;
+		this.language = language;
+		this.quit = quit;
+		this.namePhrase = namePhrase;
+		this.surnamePhrase = surnamePhrase;
+		this.agePhrase = agePhrase;
 	}
 
 

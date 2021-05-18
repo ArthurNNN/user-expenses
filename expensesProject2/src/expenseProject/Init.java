@@ -1,4 +1,6 @@
-package app;
+package expenseProject;
+
+import controller.MainController;
 
 public class Init {
 

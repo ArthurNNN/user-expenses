@@ -1,13 +1,15 @@
-package app;
+package controller;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.Language;
 import model.User;
+import utils.Utils;
 
 public class LoginController {
 
-	public static boolean validateUser(Scanner reader, ArrayList<User> users) {
+	public static boolean validateUser(Scanner reader, ArrayList<User> users, Language language) {
 
 		String login;
 		String password;

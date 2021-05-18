@@ -1,13 +1,15 @@
-package app;
+package controller;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.Language;
 import model.User;
+import utils.Utils;
 
 public class UserController {
 
-	public static ArrayList<User> createUser(Scanner reader, ArrayList<User> users) {
+	public static ArrayList<User> createUser(Scanner reader, ArrayList<User> users, Language language) {
 
 		User newUser = new User();
 		System.out.println("Tell me your name: ");
@@ -30,7 +32,7 @@ public class UserController {
 		return users;
 	}
 
-	public static ArrayList<User> deleteUser(Scanner reader, ArrayList<User> users) {
+	public static ArrayList<User> deleteUser(Scanner reader, ArrayList<User> users, Language language) {
 
 		User user;
 		String loginConsole;

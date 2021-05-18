@@ -1,4 +1,4 @@
-package app;
+package controller;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class MenuController {
 	
 	
 
-	public static void mainMenu(Language language) {
+	public static void mainMenu(String string) {
 		// TODO Auto-generated method stub
 		System.out.println("\n --- Main menu ---");
 		System.out.println("Enter your choice:");

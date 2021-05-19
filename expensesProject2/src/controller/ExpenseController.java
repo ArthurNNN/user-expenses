@@ -10,16 +10,6 @@ public class ExpenseController {
 
 	public static void start(Scanner reader, User user) {
 		
-
-
-//		ArrayList<Expense> expenses = user.getExpenses();
-		
-		
-//		user.expenses.add(new Expense("Endesa", 83.25, true));
-//		user.expenses.add(new Expense("Orange", 13.75, true));
-//		user.expenses.add(new Expense("Rent", 835.00, true));
-//		user.expenses.add(new Expense("Xiaomi Note 9", 181.65, false));
-		
 		ArrayList<Expense> exp = new ArrayList<Expense>();
 		
 		exp.add(new Expense("Endesa", 83.25, true));

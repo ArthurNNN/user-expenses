@@ -16,13 +16,13 @@ public class MainController {
 		while (true) {
 			MenuController.mainMenu(language.getTag());
 			String command = reader.nextLine();
-			if (command.equals(language.getQuit())) {
+			if (command.equals("0")) {
 				break;
-			} else if (command.equals(language.getCreate())) {
+			} else if (command.equals("1")) {
 				UserController.createUser(reader, users, language);
-			} else if (command.equals(language.getLogin())) {
+			} else if (command.equals("2")) {
 				LoginController.validateUser(reader, users, language);
-			} else if (command.equals(language.getLanguage())) {
+			} else if (command.equals("3")) {
 				language = LanguagesController.languageSelection(reader, language, languages);
 			} else {
 				System.out.println(

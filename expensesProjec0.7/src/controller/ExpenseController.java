@@ -10,18 +10,18 @@ import model.User;
 public class ExpenseController {
 
 	public static void start(Scanner reader, User user) {
-
+		
 		ArrayList<Expense> exp = new ArrayList<Expense>();
-
+		
 		exp.add(new Expense("Endesa", 83.25, true));
 		exp.add(new Expense("Orange", 13.75, true));
 		exp.add(new Expense("Rent", 835.00, true));
 		exp.add(new Expense("Xiaomi Note 9", 181.65, false));
-
+		
 		user.setExpenses(exp);
-
+		
 		System.out.println(user);
-
+		
 //		Utils.printArray(expenses);
 
 //		Menu.printExpenseMenu();
@@ -48,5 +48,7 @@ public class ExpenseController {
 		}
 
 	}
+
+
 
 }

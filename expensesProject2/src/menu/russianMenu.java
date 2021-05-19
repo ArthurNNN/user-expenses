@@ -8,7 +8,7 @@ public class russianMenu {
 		System.out.println("1-Создать пользователя");
 		System.out.println("2-Войти в Expenses");
 		System.out.println("3-Язык");
-		System.out.println("3-Выход");
+		System.out.println("0-Выход");
 		System.out.print("Выбрать: ");
 	}
 
@@ -25,7 +25,7 @@ public class russianMenu {
 		System.out.println("2-Каталанский");
 		System.out.println("3-Испанский");
 		System.out.println("4-Русский");
-		System.out.println("5-Выход");
+		System.out.println("0-Выход");
 		System.out.print("Выбрать: ");
 	}
 }

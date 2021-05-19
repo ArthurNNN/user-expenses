@@ -12,7 +12,8 @@ public class MainController {
 		ArrayList<User> users = new ArrayList<User>();
 		Scanner reader = new Scanner(System.in);
 		HashMap<String, Language> languages = LanguagesController.initLanguages();
-		Language language = languages.get("rus");
+		Language language = languages.get("english");
+		System.out.println(language);
 		while (true) {
 			MenuController.mainMenu(language.getTag());
 			String command = reader.nextLine();

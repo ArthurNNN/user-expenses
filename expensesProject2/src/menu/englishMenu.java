@@ -9,7 +9,7 @@ public class englishMenu {
 		System.out.println("1-Create user");
 		System.out.println("2-Login into Expenses");
 		System.out.println("3-Language");
-		System.out.println("3-Quit");
+		System.out.println("0-Quit");
 		System.out.print("Option: ");
 
 	}
@@ -28,7 +28,7 @@ public class englishMenu {
 		System.out.println("2-Catalan");
 		System.out.println("3-Spanish");
 		System.out.println("4-Russian");
-		System.out.println("5-Quit");
+		System.out.println("0-Quit");
 		System.out.print("Option: ");
 	}
 

@@ -30,8 +30,8 @@ public class LanguagesController {
 				"Diga'm el teu nom: ", "Diga'm el teu cognom:", "Diga'm la teva edat: "));
 		languagesInit.put("spanish", new Language("Spanish", "spa", "crear", "loguearse", "lengua", "salir",
 				"Dime tu nombre: ", "Dime tu apellido: ", "Dime tu edad: "));
-		languagesInit.put("russian", new Language("Russian", "rus", "�?оздать", "войти", "�?зык", "выход",
-				"�?азовите ваше им�?:", "�?азовите вашу фамилию:", "�?азовите ваш возра�?т:"));
+		languagesInit.put("russian", new Language("Russian", "rus", "Создать", "войти", "язык", "выход",
+				"Назовите ваше имя?:", "Назовите вашу фамилию:", "Назовите ваш возраст:"));
 
 		return languagesInit;
 	}

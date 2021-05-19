@@ -42,13 +42,13 @@ public class ExpenseController {
 			String command = reader.nextLine();
 
 			if (command.equals("1")) {
-				userExp = addExpense(reader, user);
+				userExp = add(reader, user);
 
 			} else if (command.equals("4")) {
-				userExp = deleteExpense(reader, user);
+				userExp = delete(reader, user);
 
 			} else if (command.equals("5")) {
-				printAllExpenses(user);
+				list(user);
 
 			} else if (command.equals("0")) {
 				break;
@@ -58,26 +58,6 @@ public class ExpenseController {
 
 	}
 
-	public static ArrayList<Expense> addExpense(Scanner reader, User user) {
 
-		ArrayList<Expense> expenses = user.getExpenses();
-
-		return expenses;
-
-	}
-
-	public static ArrayList<Expense> deleteExpense(Scanner reader, User user) {
-
-		ArrayList<Expense> expenses = user.getExpenses();
-
-		return expenses;
-
-	}
-
-	public static void printAllExpenses(User user) {
-		
-		System.out.println(user.expenses);
-
-	}
 
 }

@@ -6,11 +6,11 @@ public class catalanMenu {
 
 		System.out.println("\nBenvingut a Prgramari de Desepeses");
 		System.out.println("-------------------------\n");
-		System.out.println("1-Creació d'usuari");
+		System.out.println("1-CreaciÃ³ d'usuari");
 		System.out.println("2-Login a Despeses");
 		System.out.println("3-Llengues");
 		System.out.println("0-Sortir");
-		System.out.print("Opció: ");
+		System.out.print("OpciÃ³: ");
 
 	}
 

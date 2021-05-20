@@ -1,6 +1,6 @@
 package model;
 
-public class MyDate {
+public class Date {
 	
 	int day;
 	int month;
@@ -23,13 +23,13 @@ public class MyDate {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public MyDate(int day, int mouth, int year) {
+	public Date(int day, int mouth, int year) {
 		super();
 		this.day = day;
 		this.month = mouth;
 		this.year = year;
 	}
-	public MyDate() {
+	public Date() {
 		super();
 	}
 	

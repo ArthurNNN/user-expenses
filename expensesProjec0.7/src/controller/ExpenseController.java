@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 import managment.ExpenseManagment;
 import model.Expense;
+import model.Language;
 import model.User;
 
 public class ExpenseController {
 
-	public static void start(Scanner reader, User user) {
+	public static void start(Scanner reader, User user, Language language) {
 		
 		ArrayList<Expense> exp = new ArrayList<Expense>();
 		
@@ -29,7 +30,7 @@ public class ExpenseController {
 		ArrayList<Expense> userExp = user.getExpenses();
 
 		while (true) {
-			MenuController.expenseMenu();
+			MenuController.expenseMenu(language.getTag());
 			String command = reader.nextLine();
 
 			if (command.equals("1")) {

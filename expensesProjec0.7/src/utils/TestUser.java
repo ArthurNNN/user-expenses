@@ -3,7 +3,7 @@ package utils;
 import java.util.ArrayList;
 
 import model.Expense;
-import model.MyDate;
+import model.Date;
 import model.User;
 
 public class TestUser {
@@ -100,20 +100,20 @@ public class TestUser {
 		System.out.println(isa);
 
 		// option A
-		MyDate mondayMorning = new MyDate(4, 5, 2021);
+		Date mondayMorning = new Date(4, 5, 2021);
 		Expense internetYoigoApril = new Expense("Internet 200MB Yoigo", 30, mondayMorning);
 		isa.expenses.add(internetYoigoApril);
 
-		MyDate lastSundayDate = new MyDate(14, 5, 2021);
+		Date lastSundayDate = new Date(14, 5, 2021);
 		Expense lastSundayFun = new Expense("Bar and drinks and friends", 110, lastSundayDate);
 		isa.expenses.add(lastSundayFun);
 
-		MyDate lastSaturdayDate = new MyDate(14, 6, 2021);
+		Date lastSaturdayDate = new Date(14, 6, 2021);
 		Expense lastSaturdayFun = new Expense("Bar and drinks and friends", 110, lastSaturdayDate);
 		isa.expenses.add(lastSaturdayFun);
 
 		// option B
-		isa.expenses.add(new Expense("Internet 200MB Yoigo", 40, new MyDate(1, 5, 2021)));
+		isa.expenses.add(new Expense("Internet 200MB Yoigo", 40, new Date(1, 5, 2021)));
 		System.out.println("Expenses: " + isa.calculateExpenses(5));
 	}
 

@@ -3,7 +3,7 @@ package model;
 public class Expense {
 	public String title;
 	public double value;
-	public MyDate date;
+	public Date date;
 	public Boolean isMensual;
 
 	public Expense() {
@@ -12,7 +12,7 @@ public class Expense {
 	
 	
 
-	public Expense(String title, double value, MyDate date, Boolean isMensual) {
+	public Expense(String title, double value, Date date, Boolean isMensual) {
 		super();
 		this.title = title;
 		this.value = value;
@@ -20,15 +20,15 @@ public class Expense {
 		this.isMensual = isMensual;
 	}
 
-	public MyDate getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(MyDate date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
-	public Expense(String title, double value, MyDate date) {
+	public Expense(String title, double value, Date date) {
 		super();
 		this.title = title;
 		this.value = value;

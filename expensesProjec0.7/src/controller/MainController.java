@@ -16,6 +16,7 @@ public class MainController {
 		// fake user to test expenses
 		users.add(new User("1", "1"));
 
+
 		// declare languages object - type HashMap- and assign the result of
 		// calling at method initLanguages of class LanguageController
 		// initLanguages() is a method we use to initialize languages objects,
@@ -29,9 +30,10 @@ public class MainController {
 		// we set english as default language of the app
 		
 		Language language = languages.get("russian");
+		System.out.println(language);
 		Scanner reader = new Scanner(System.in);
 
-		System.out.println(language);
+
 		while (true) {
 			MenuController.mainMenu(language.getTag());
 			String command = reader.nextLine();
@@ -43,12 +45,12 @@ public class MainController {
 				LoginController.validateUser(reader, users, language);
 			} else if (command.equals("3")) {
 				language = LanguagesController.languageSelection(reader, language, languages);
-				MenuController.mainMenu(language.getTag());
+//				MenuController.mainMenu(language.getTag());
 			} else if (command.equals("4")) {
 				UserController.listUsers(users);
 			} else {
 				System.out.println(
-						"\nPlease, you have to write \"create\", \"login\" or \"quit\". Try another time ...\n");
+						"\nPlease, you have to select 1-4 or 0. Try another time ...\n");
 			}
 
 		}

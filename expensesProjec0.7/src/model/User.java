@@ -19,6 +19,16 @@ public class User {
 	// Constructor from User Class
 	public User() {
 	}
+	
+	
+
+	public User(String login, String password) {
+		super();
+		this.login = login;
+		this.password = password;
+	}
+
+
 
 	public User(String name, String surname, String login, String password) {
 		super();

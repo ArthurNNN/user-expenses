@@ -26,8 +26,11 @@ public class ExpenseManagment {
 	}
 
 	public static void list(User user) {
-
-		System.out.println(user.expenses);
+		int position = 1;
+		for (Expense expense : user.getExpenses()) {
+			System.out.println("№" + position + " " + expense);
+			position++;
+		}
 
 	}
 

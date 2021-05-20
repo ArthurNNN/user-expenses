@@ -3,6 +3,8 @@ package controller;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import languages.*;
+// import languages.*;
 import model.Language;
 
 public class LanguagesController {
@@ -20,18 +22,19 @@ public class LanguagesController {
 		return language;
 	}
 
-// to-do while
 	public static HashMap<String, Language> initLanguages() {
+
+		// we are declaring languagesInit of type hashMap and assigning a new object
+		// HashMap of String and Language object
 		HashMap<String, Language> languagesInit = new HashMap<String, Language>();
 
-		languagesInit.put("english", new Language("English", "eng", "create", "login", "language", "quit",
-				"Tell me your name: ", "Tell me your surname: ", "Tell me your age: "));
-		languagesInit.put("catalan", new Language("Catalan", "cat", "crear", "logejar-se", "llengua", "sortir",
-				"Diga'm el teu nom: ", "Diga'm el teu cognom:", "Diga'm la teva edat: "));
-		languagesInit.put("spanish", new Language("Spanish", "esp", "crear", "loguearse", "lengua", "salir",
-				"Dime tu nombre: ", "Dime tu apellido: ", "Dime tu edad: "));
-		languagesInit.put("russian", new Language("Russian", "rus", "Создать", "войти", "язык", "выход",
-				"Назовите ваше имя?:", "Назовите вашу фамилию:", "Назовите ваш возраст:"));
+//		EnglishLanguage.init(languagesInit);
+//
+//		CatalanLanguage.init(languagesInit);
+
+//		RussianLanguage.init(languagesInit);
+
+//		SpanishLanguage.init(languagesInit);
 
 		return languagesInit;
 	}

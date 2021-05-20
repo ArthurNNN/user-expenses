@@ -54,6 +54,12 @@ public class User {
 		this.basicSalary = basicSalary;
 		this.expenses = new ArrayList<Expense>();
 	}
+	
+	public void update(int index, Expense expense) {
+		
+		this.expenses.set(index, expense);
+		
+	}
 
 	
 	

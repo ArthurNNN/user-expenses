@@ -9,14 +9,13 @@ import model.User;
 
 public class MainController {
 	public static void AppStarting() {
-		
-		
+
 		// just to store some users we create along the program executes
 		ArrayList<User> users = new ArrayList<User>();
-		
-		//fake user to test expenses
-		users.add(new User ("1", "1"));
-		
+
+		// fake user to test expenses
+		users.add(new User("1", "1"));
+
 		// declare languages object - type HashMap- and assign the result of
 		// calling at method initLanguages of class LanguageController
 		// initLanguages() is a method we use to initialize languages objects,
@@ -24,11 +23,12 @@ public class MainController {
 		// etc
 		// and we will store in a hashMap
 		HashMap<String, Language> languages = LanguagesController.initLanguages();
-		
+
 		// we could user ArrayList … so
 		// ArrayList<Language> languages = LanguagesController. initLanguages();
 		// we set english as default language of the app
-		Language language = languages.get("english");
+		
+		Language language = languages.get("russian");
 		Scanner reader = new Scanner(System.in);
 
 		System.out.println(language);
@@ -50,10 +50,9 @@ public class MainController {
 				System.out.println(
 						"\nPlease, you have to write \"create\", \"login\" or \"quit\". Try another time ...\n");
 			}
-			
 
 		}
-		reader.close();
+//		reader.close();
 
 	}
 

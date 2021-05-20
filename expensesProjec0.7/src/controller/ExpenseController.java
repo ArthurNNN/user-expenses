@@ -47,7 +47,7 @@ public class ExpenseController {
 				userExp = ExpenseManagment.delete(reader, user);
 
 			} else if (command.equals("3")) {
-				userExp = ExpenseManagment.update(reader, user);
+				 ExpenseManagment.update(reader, user);
 
 			} else if (command.equals("4")) {
 				ExpenseManagment.list(user);

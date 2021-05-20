@@ -1,5 +1,7 @@
 package managment;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -36,7 +38,7 @@ public class ExpenseManagment {
 
 	}
 
-	public static ArrayList<Expense> update(Scanner reader, User user) {
+	public static void update(Scanner reader, User user) {
 		
 		System.out.println("\nEnter expense name: ");
 		String expenseName = reader.next();
@@ -84,8 +86,9 @@ public class ExpenseManagment {
 		
 		if (user.getExpenses().size() == count) 
 			System.out.println(expenseName + " not found ....\n");
+
 	}
 		
-	}
+	
 
 }

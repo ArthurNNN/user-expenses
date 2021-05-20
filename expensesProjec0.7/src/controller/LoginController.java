@@ -46,7 +46,7 @@ public class LoginController {
 
 			if (loginConsole.equals(login) && passwordConsole.equals(password)) {
 				System.out.println("Access Granted! Welcome!");
-				ExpenseController.start(reader, user);
+				ExpenseController.start(reader, user, language);
 				return true;
 
 			} else if (loginConsole.equals(login)) {

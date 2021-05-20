@@ -1,7 +1,9 @@
 package model;
 
+import java.util.Date;
+
 public class Expense {
-	public String title;
+	public String name;
 	public double value;
 	public Date date;
 	public Boolean isMensual;
@@ -12,9 +14,9 @@ public class Expense {
 	
 	
 
-	public Expense(String title, double value, Date date, Boolean isMensual) {
+	public Expense(String name, double value, Date date, Boolean isMensual) {
 		super();
-		this.title = title;
+		this.name = name;
 		this.value = value;
 		this.date = date;
 		this.isMensual = isMensual;
@@ -28,9 +30,9 @@ public class Expense {
 		this.date = date;
 	}
 
-	public Expense(String title, double value, Date date) {
+	public Expense(String name, double value, Date date) {
 		super();
-		this.title = title;
+		this.name = name;
 		this.value = value;
 		this.date = date;
 	}
@@ -40,19 +42,19 @@ public class Expense {
 		this.value = value;
 	}
 
-	public Expense(String title, double value, Boolean isMensual) {
+	public Expense(String name, double value, Boolean isMensual) {
 		super();
-		this.title = title;
+		this.name = name;
 		this.value = value;
 		this.isMensual = isMensual;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public double getValue() {
@@ -74,6 +76,6 @@ public class Expense {
 
 	@Override
 	public String toString() {
-		return "\nExpense [title=" + title + ", value=" + value + ", date=" + date + ", isMensual=" + isMensual + "]";
+		return "\nExpense [name=" + name + ", value=" + value + ", date=" + date + ", isMensual=" + isMensual + "]";
 	}
 }

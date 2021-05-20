@@ -31,15 +31,25 @@ public class ExpenseController {
 
 		while (true) {
 			MenuController.expenseMenu(language.getTag());
+
+//			System.out.println("1-Add expense");
+//			System.out.println("2-Delete expense");
+//			System.out.println("3-Update expenses");
+//			System.out.println("4-List expenses");
+//			System.out.println("0-Quit");
+
 			String command = reader.nextLine();
 
 			if (command.equals("1")) {
 				userExp = ExpenseManagment.add(reader, user);
 
-			} else if (command.equals("4")) {
+			} else if (command.equals("2")) {
 				userExp = ExpenseManagment.delete(reader, user);
 
-			} else if (command.equals("5")) {
+			} else if (command.equals("3")) {
+				userExp = ExpenseManagment.update(reader, user);
+
+			} else if (command.equals("4")) {
 				ExpenseManagment.list(user);
 
 			} else if (command.equals("0")) {

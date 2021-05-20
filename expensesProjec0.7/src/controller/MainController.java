@@ -44,13 +44,17 @@ public class MainController {
 			} else if (command.equals("3")) {
 				language = LanguagesController.languageSelection(reader, language, languages);
 				MenuController.mainMenu(language.getTag());
+			} else if (command.equals("4")) {
+				UserController.listUsers(users);
 			} else {
 				System.out.println(
 						"\nPlease, you have to write \"create\", \"login\" or \"quit\". Try another time ...\n");
 			}
-		}
+			
 
+		}
 		reader.close();
+
 	}
 
 }

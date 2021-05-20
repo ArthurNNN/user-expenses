@@ -99,7 +99,7 @@ public class UserController {
 
 	}
 
-	public static void printAllUsers(ArrayList<User> users) {
+	public static void listUsers(ArrayList<User> users) {
 		System.out.println("Users:");
 		for (User UserToPrint : users) {
 			System.out.println(UserToPrint);

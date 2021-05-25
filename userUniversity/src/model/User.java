@@ -25,6 +25,7 @@ public class User {
 		this.email = email;
 	}
 
+	
 	public ArrayList<Expense> expenses;
 
 	// Constructor from User Class

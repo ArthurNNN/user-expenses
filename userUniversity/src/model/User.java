@@ -5,14 +5,25 @@ import java.util.ArrayList;
 public class User {
 
 	// Fields from User Class
-	public String login;
+
 	public String name;
-	public String password;
+
 	public String surname;
 	public int age;
+	public String email;
+	public String login;
+	public String password;
 	public int weigth;
 	public int heigth;
 	public double basicSalary;
+
+	public User(String name, String surname, int age, String email) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.age = age;
+		this.email = email;
+	}
 
 	public ArrayList<Expense> expenses;
 
@@ -25,6 +36,8 @@ public class User {
 		this.login = login;
 		this.password = password;
 	}
+	
+	
 
 	public User(String name, String surname, String login, String password) {
 		super();

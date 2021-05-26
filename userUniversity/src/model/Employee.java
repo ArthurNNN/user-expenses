@@ -1,12 +1,9 @@
+
 package model;
 
 public class Employee extends User {
 
 	public double salary;
-
-	public Employee(String name, String surname, int age, String email) {
-		super(name, surname, age, email);
-	}
 
 	public Employee(String name, String surname, int age, double salary) {
 		super(name, surname, age);
@@ -20,7 +17,10 @@ public class Employee extends User {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Employee [salary=" + salary + ", name=" + name + ", surname=" + surname + ", age=" + age + "]";
+	}
 
 }

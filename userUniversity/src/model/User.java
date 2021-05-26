@@ -1,68 +1,77 @@
+
 package model;
 
 import java.util.ArrayList;
 
 public class User {
 
-	// Fields from User Class
-
 	public String name;
-
 	public String surname;
 	public int age;
 	public String email;
-	public String login;
+	public String userName;
 	public String password;
-	public int weigth;
-	public int heigth;
-	public double basicSalary;
+	public boolean isValidated = false;
+	public boolean isBlocked = false;
+	public ArrayList<Expense> expenses;
+
+	public User(String name, String surname, int age, String email, String userName, String password) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.age = age;
+		this.email = email;
+		this.userName = userName;
+		this.password = password;
+		this.expenses = new ArrayList<Expense>();
+	}
+
+	public User(String name, String surname, int age, String userName, String password) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.age = age;
+		this.userName = userName;
+		this.password = password;
+		this.expenses = new ArrayList<Expense>();
+	}
+
+	public User(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+		this.isValidated = true;
+		this.expenses = new ArrayList<Expense>();
+	}
+
+	public User() {
+		this.expenses = new ArrayList<Expense>();
+	}
 
 	public User(String name, String surname, int age, String email) {
-		super();
+
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
 		this.email = email;
 	}
 
-	
-	public ArrayList<Expense> expenses;
-
-	// Constructor from User Class
-	public User() {
-	}
-
-	public User(String login, String password) {
-		super();
-		this.login = login;
-		this.password = password;
-	}
-	
-	
-
-	public User(String name, String surname, String login, String password) {
-		super();
-		this.login = login;
-		this.name = name;
-		this.password = password;
-		this.surname = surname;
-	}
-
 	public User(String name, String surname, int age) {
-		super();
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
+
 	}
 
-	public User(String name, int age, int weigth, int heigth, double basicSalary) {
-		super();
-		this.name = name;
-		this.age = age;
-		this.weigth = weigth;
-		this.heigth = heigth;
-		this.basicSalary = basicSalary;
-		this.expenses = new ArrayList<Expense>();
+	public void add(Expense expense) {
+
+		this.expenses.add(expense);
+
+	}
+
+	public void delete(Expense expense) {
+
+		this.expenses.remove(expense);
 	}
 
 	public void update(int index, Expense expense) {
@@ -71,91 +80,12 @@ public class User {
 
 	}
 
-	// Methods from User Class
-	public double salaryAfterExpenses() {
-
-		double salaryMensual = this.basicSalary;
-		double sumExpenses = 0;
-		System.out.println("\n-----------------------------------");
-		System.out.println("Client name is " + this.name + ".");
-		System.out.println("Client salary is " + this.basicSalary + ".");
-		System.out.println("\nClient expenses are: " + expenses + ".");
-		for (Expense expense : this.expenses) {
-			if (expense.getIsMensual()) {
-				sumExpenses = sumExpenses + expense.getValue();
-			}
-
-		}
-		if (sumExpenses > salaryMensual) {
-			System.out.println("Salary is less than expenses!");
-		}
-		System.out.println("\nTotal client expenses: " + sumExpenses);
-		System.out.println(this.name + "'s amount after payment of expenses: " + (salaryMensual - sumExpenses));
-		return salaryMensual - sumExpenses;
+	public ArrayList<Expense> getExpenses() {
+		return expenses;
 	}
 
-	public boolean isAdult() {
-		System.out.println(this.name + " is " + this.age + " years old.");
-		return this.age >= 18 && this.age < 80;
-	}
-
-	public void sportOffer(double clientMoney) {
-		if (this.isAdult()) {
-			if (clientMoney <= 1000) {
-				System.out.println("We offer you: running sport!");
-			} else if (clientMoney > 1000 && clientMoney <= 5000) {
-				System.out.println("We offer you: bicycle sport");
-			} else if (clientMoney > 5000) {
-				System.out.println("We offer you: golf!");
-			}
-		} else {
-			System.out.println("Sorry. We haven't offert for you anything.");
-		}
-	}
-
-	public void becomeOlder() {
-		this.age = age + 1;
-	}
-
-	public double yearNetSalary() {
-
-		double yearNetSalary = 0.0;
-
-		// first i must check weather THIS object have got money
-		// this.basicSalary > 1
-		if (this.basicSalary > 1) {
-
-			yearNetSalary = this.basicSalary * 14;
-
-			if (this.age > 30) {
-				yearNetSalary = yearNetSalary * 0.88;
-			} else {
-				yearNetSalary = yearNetSalary * 0.94;
-			}
-
-		} else {
-			System.out.println(name + " has not got any salary, so YearNetSalary not available!");
-		}
-
-		return yearNetSalary;
-	}
-
-	public double calculateExpenses(int month) {
-		double expensesMonth = 0.0;
-		for (Expense expense : this.expenses) {
-			if (expense.getDate().getMonth() == month)
-				expensesMonth = expensesMonth + expense.getValue();
-		}
-		return expensesMonth;
-	}
-
-	// Getters and Setters and toString
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
+	public void setExpenses(ArrayList<Expense> expenses) {
+		this.expenses = expenses;
 	}
 
 	public String getName() {
@@ -164,14 +94,6 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public String getSurname() {
@@ -190,54 +112,50 @@ public class User {
 		this.age = age;
 	}
 
-	public int getWeigth() {
-		return weigth;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setWeigth(int weigth) {
-		this.weigth = weigth;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public int getHeigth() {
-		return heigth;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setHeigth(int heigth) {
-		this.heigth = heigth;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-	public double getBasicSalary() {
-		return basicSalary;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setBasicSalary(double basicSalary) {
-		this.basicSalary = basicSalary;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public ArrayList<Expense> getExpenses() {
-		return expenses;
+	public boolean isValidated() {
+		return isValidated;
 	}
 
-	public void setExpenses(ArrayList<Expense> expenses) {
-		this.expenses = expenses;
+	public void setValidated(boolean isValidated) {
+		this.isValidated = isValidated;
 	}
 
-	public void add(Expense expense) {
-
-		this.expenses.add(expense);
+	public boolean isBlocked() {
+		return isBlocked;
 	}
-	
-	public void delete(Expense expense) {
-		this.expenses.remove(expense);
+
+	public void setBlocked(boolean isBlocked) {
+		this.isBlocked = isBlocked;
 	}
 
 	@Override
 	public String toString() {
-		return "User [login=" + login + ", name=" + name + ", password=" + password + ", surname=" + surname + ", age="
-				+ age + ", weigth=" + weigth + ", heigth=" + heigth + ", basicSalary=" + basicSalary + ", \nexpenses="
-				+ expenses + "]";
+		return "User [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + ", userName="
+				+ userName + ", password=" + password + "]";
 	}
-
-
 
 }

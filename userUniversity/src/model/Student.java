@@ -3,7 +3,7 @@ package model;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Student extends User {
+public class Student extends User implements Holiday {
 
 	public HashMap<String, Double> marks;
 	public boolean active;
@@ -47,6 +47,12 @@ public class Student extends User {
 
 		return "Student [marks=" + marks + ", active=" + active + ", inscriptionDate=" + inscriptionDate + ", name="
 				+ name + ", surname=" + surname + ", age=" + age + "]";
+	}
+
+	
+	public void calculationHoliday() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

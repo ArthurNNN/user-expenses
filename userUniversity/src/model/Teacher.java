@@ -1,6 +1,6 @@
 package model;
 
-public class Teacher extends Employee {
+public class Teacher extends Employee implements Holiday{
 
 	public double extraSalaryPerCourse;
 

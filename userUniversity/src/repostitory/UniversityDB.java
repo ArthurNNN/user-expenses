@@ -1,4 +1,4 @@
-package repository;
+package repostitory;
 
 import java.util.List;
 import model.User;

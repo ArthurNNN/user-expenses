@@ -3,19 +3,20 @@ package model;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Student extends User implements Holiday {
+public class Student extends User {
 
 	public HashMap<String, Double> marks;
 	public boolean active;
 	public Date inscriptionDate;
 
-	public Student(String name, String surname, int age, String email, boolean active) {
-
+	public Student(String name, String surname, int age, String email,
+			boolean active) {
+		
 		super(name, surname, age, email);
-
+		
 		this.marks = new HashMap<String, Double>();
 		this.active = active;
-
+		
 	}
 
 	public HashMap<String, Double> getMarks() {
@@ -44,15 +45,8 @@ public class Student extends User implements Holiday {
 
 	@Override
 	public String toString() {
-
-		return "Student [marks=" + marks + ", active=" + active + ", inscriptionDate=" + inscriptionDate + ", name="
-				+ name + ", surname=" + surname + ", age=" + age + "]";
-	}
-
 	
-	public void calculationHoliday() {
-		// TODO Auto-generated method stub
-		
+		return "Student [marks=" + marks + ", active=" + active + ", inscriptionDate=" + inscriptionDate +  "]";
 	}
 
 }

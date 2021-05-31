@@ -1,15 +1,15 @@
 package model;
 
-public class Teacher extends Employee implements Holiday{
-
+public class Teacher extends Employee {
+	
 	public double extraSalaryPerCourse;
 
-	public Teacher(String name, String surname, int age, double salary, double extraSalaryPerCourse) {
-
+	public Teacher(String name, String surname, int age, double salary,
+			double extraSalaryPerCourse) {
+		
 		super(name, surname, age, salary);
-
+		
 		this.extraSalaryPerCourse = extraSalaryPerCourse;
-
 	}
 
 	public double getExtraSalaryPerCourse() {
@@ -22,9 +22,14 @@ public class Teacher extends Employee implements Holiday{
 
 	@Override
 	public String toString() {
-
-		return "Teacher [extraSalaryPerCourse=" + extraSalaryPerCourse + ", salary=" + salary + ", name=" + name
-				+ ", surname=" + surname + ", age=" + age + "]";
+		
+			
+		return super.toString()	 + "\nTeacher [extraSalaryPerCourse=" + extraSalaryPerCourse + "]";
 	}
+	
+	
+	
+	
+	
 
 }

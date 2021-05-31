@@ -1,4 +1,3 @@
-
 package model;
 
 import java.util.ArrayList;
@@ -35,7 +34,7 @@ public class User {
 		this.password = password;
 		this.expenses = new ArrayList<Expense>();
 	}
-
+	
 	public User(String userName, String password) {
 		super();
 		this.userName = userName;
@@ -47,37 +46,38 @@ public class User {
 	public User() {
 		this.expenses = new ArrayList<Expense>();
 	}
-
+	
 	public User(String name, String surname, int age, String email) {
-
+		
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
 		this.email = email;
-	}
+		}
 
 	public User(String name, String surname, int age) {
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
-
+		
 	}
 
 	public void add(Expense expense) {
-
+		
 		this.expenses.add(expense);
-
+		
 	}
-
+	
 	public void delete(Expense expense) {
-
+		
+		
 		this.expenses.remove(expense);
 	}
-
+	
 	public void update(int index, Expense expense) {
-
+		
 		this.expenses.set(index, expense);
-
+		
 	}
 
 	public ArrayList<Expense> getExpenses() {
@@ -135,7 +135,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
 	public boolean isValidated() {
 		return isValidated;
 	}
@@ -143,6 +143,8 @@ public class User {
 	public void setValidated(boolean isValidated) {
 		this.isValidated = isValidated;
 	}
+	
+	
 
 	public boolean isBlocked() {
 		return isBlocked;
@@ -154,8 +156,14 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + ", userName="
+		
+		return name + "\nUser [name=" + name + ", surname=" + surname + ", age=" + age + ", email=" + email + ", userName="
 				+ userName + ", password=" + password + "]";
 	}
+
+	
+	
+
+	
 
 }
